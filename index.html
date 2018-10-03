@@ -19,10 +19,28 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-  <script src="./script.js"></script>
+
+  <!-- <script src="./script.js"></script>
   <script src="./app.js"></script>
   <script src="./es6.js"></script>
-  <script src="./classes.js"></script>
+  <script src="./classes.js"></script> -->
+  <!-- <script src="./namespace.js"></script> -->
+  <script src="node_modules/systemjs/dist/system.js"></script>
+  <script>
+    // set our baseURL reference path
+    SystemJS.config({
+      baseURL: '/',
+      packages: {
+        '/': {
+          defaultExtension: 'js'
+        }
+      }
+    });
+
+    // loads /js/main.js
+    SystemJS.import('practice-modules.js');
+  </script>
+  <!-- <script src="./practice-modules.js"></script> -->
 </body>
 
 </html>
