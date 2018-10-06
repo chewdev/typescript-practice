@@ -20,6 +20,8 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+  <div id="app">Change this with jquery</div>
+
   <!-- <script src="./script.js"></script>
   <script src="./app.js"></script>
   <script src="./es6.js"></script>
@@ -27,11 +29,15 @@
   <!-- <script src="./namespace.js"></script> -->
   <!-- <script src="./interfaces.js"></script>
   <script src="./generics.js"></script> -->
-  <script src="./decorators.js"></script>
+  <!-- <script src="./decorators.js"></script> -->
+  <!-- <script src="external-libraries.js"></script> -->
   <script src="node_modules/systemjs/dist/system.js"></script>
   <script>
     // set our baseURL reference path
     SystemJS.config({
+      map: {
+        "jQuery": "node_modules/jquery/dist/jquery.min.js"
+      },
       baseURL: '/',
       packages: {
         '/': {
@@ -41,7 +47,8 @@
     });
 
     // loads /js/main.js
-    SystemJS.import('practice-modules.js');
+    SystemJS.import('external-libraries.js');
+    // SystemJS.import('practice-modules.js');
   </script>
   <!-- <script src="./practice-modules.js"></script> -->
 </body>
